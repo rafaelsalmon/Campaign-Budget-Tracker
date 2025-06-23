@@ -17,6 +17,11 @@ This project is a backend system for managing advertising budgets and scheduling
 - Simulated spend management command
 
 ---
+## Pseudo-Code
+
+[See Pseudo-code](PSEUDO_CODE.md)
+
+---
 
 ## Tech Stack
 
