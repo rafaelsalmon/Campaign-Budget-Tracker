@@ -173,7 +173,7 @@ Configured via `CELERY_BEAT_SCHEDULE` in `settings.py`. Task schedule frequencie
 - Admin panel uses Django’s built-in admin system with `list_display`, `search_fields`, and `list_filter` for effective backend management — no custom views were needed.
 - DEBUG is set to True for development/testing purposes only.
 - Requires Redis running on localhost:6379 (default port).
-- The setup procedure in this document assumes Python is pre-installed locally. You’re good to go if the version is Python 3.7 or higher (ideally 3.10+). If you don't have it installed, for Windows, run "winget install 9NQ7512CXL7T" on Powershell or Command Window. Else, go to [https://www.python.org/downloads] (https://www.python.org/downloads).
+- The setup procedure in this document assumes Python is pre-installed locally. You’re good to go if the version is Python 3.7 or higher (ideally 3.10+). If you don't have it installed, for Windows, run "winget install 9NQ7512CXL7T" on Powershell or Command Window. Else, go to [https://www.python.org/downloads](https://www.python.org/downloads).
 
 ---
 
