@@ -193,6 +193,8 @@ Configured via `CELERY_BEAT_SCHEDULE` in `settings.py`. Task schedule frequencie
 - DEBUG is set to True for development/testing purposes only.
 - Requires Redis running on localhost:6379 (default port).
 - The setup procedure in this document assumes Python is pre-installed locally. You’re good to go if the version is Python 3.7 or higher (ideally 3.10+). If you don't have it installed, for Windows, run "winget install 9NQ7512CXL7T" on PowerShell or Command Window. Else, go to [https://www.python.org/downloads](https://www.python.org/downloads).
+- Django and many other packages are not yet fully compatible with Python 3.14 (on 06/24/2025). If your virtual environment Python version is this, then:
+Install Python 3.12 (if not already installed). Download it from: [https://www.python.org/downloads/release/python-3120/](https://www.python.org/downloads/release/python-3120/) . During the installation, check “Add Python to PATH”. Then create the virtual environment with this command instead: "py -3.12 -m venv venv312", followed by ".\venv312\Scripts\python.exe -m pip install --upgrade pip". Only then, move to the next step on the setup (pip install -r requirements.txt).
 
 ---
 
