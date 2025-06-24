@@ -95,10 +95,11 @@ python manage.py runserver
 ```bash
 deactivate [//]: # (Quit virtual environment a.k.a. "venv")
 cd "C:\Path\To\Redis" [//]: # (Redis installation folderm if not in PATH. Usually C:\Program Files\Redis)
-.\redis-server.exe --port 6379 [//]: # (first terminal)
-.\venv\Scripts\Activate [//]: # (Reenable venv. ".\venv312\Scripts\Activate.ps1 " if using venv enabled for specific Python version 3.12)
-celery -A ad_budget_project worker --loglevel=info [//]: # (second terminal)
-celery -A ad_budget_project beat --loglevel=info [//]: # (third terminal)
+.\redis-server.exe --port 6379 [//]: # (First terminal)
+.\venv\Scripts\Activate [//]: # (Second terminal => Enable venv. ".\venv312\Scripts\Activate.ps1 " if using venv enabled for specific Python version 3.12)
+celery -A ad_budget_project worker --loglevel=info --pool=solo [//]: # (Still on second terminal)
+celery -A ad_budget_project beat --loglevel=info [//]: # (Third terminal)
+python manage.py runserver (Fourth terminal, for Django)
 ```
 
 Before starting celery workers and beat scheduler, Install Redis (if not already installed) and run it. If you're on Windows, Redis is not installed by default. You can either use Redis via Docker or install a native Windows port.
