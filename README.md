@@ -62,7 +62,7 @@ This will install all necessary packages for the project, including:
 - Mypy
 - types-redis
 
-This requirements need native compilation and their instalation may require you to install Microsoft C++ Build Tools beforehand. In this case, go to [ https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/) and download the installer. In the installer, check the following:
+These requirements need native compilation and their instalation may require you to install Microsoft C++ Build Tools beforehand. In this case, go to [ https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/) and download the installer. In the installer, check the following:
 
 - “C++ build tools”
 - “Windows 10 SDK”
