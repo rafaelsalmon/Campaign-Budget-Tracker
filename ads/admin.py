@@ -2,10 +2,10 @@ from django.contrib import admin
 from .models import Brand, Campaign, Schedule
 
 
-# @admin.register(Brand)
-# class BrandAdmin(admin.ModelAdmin):
-#     list_display = ("name", "daily_budget", "monthly_budget")
-#     search_fields = ("name",)
+@admin.register(Brand)
+class BrandAdmin(admin.ModelAdmin):
+    list_display = ("name", "daily_budget", "monthly_budget")
+    search_fields = ("name",)
 
 # @admin.register(Campaign)
 # class CampaignAdmin(admin.ModelAdmin):
