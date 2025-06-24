@@ -51,8 +51,23 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process [//]: # (if nec
 ### 2. Install dependencies
 
 ```bash
+cd..
 pip install -r requirements.txt
 ```
+That will install all necessary packages for the project, including:
+
+- Django
+- Celery
+- Redis client
+- Mypy
+- types-redis
+
+The requirements need native compilation and their instalation may require you to install Microsoft C++ Build Tools beforehand. In this case, go to [ https://visualstudio.microsoft.com/visual-cpp-build-tools/](https://visualstudio.microsoft.com/visual-cpp-build-tools/) and download the installer. In the installer, check the following:
+
+✔ “C++ build tools”
+✔ “Windows 10 SDK”
+✔ “MSVC v14.x” (latest available)
+✔ “C++ CMake tools for Windows” (optional, but helpful)
 
 ### 3. Apply database migrations
 
