@@ -90,7 +90,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-### 6. Start Redis, then Celery workers and beat scheduler (in three separate terminals)
+### 6. Start Redis, then Celery workers and beat scheduler (in four separate terminals)
 
 ```bash
 deactivate [//]: # (Quit virtual environment a.k.a. "venv")
