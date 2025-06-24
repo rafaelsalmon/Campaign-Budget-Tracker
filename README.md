@@ -99,7 +99,7 @@ cd "C:\Path\To\Redis" [//]: # (Redis installation folderm if not in PATH. Usuall
 .\venv\Scripts\Activate [//]: # (Second terminal => Enable venv. ".\venv312\Scripts\Activate.ps1 " if using venv enabled for specific Python version 3.12)
 celery -A ad_budget_project worker --loglevel=info --pool=solo [//]: # (Still on second terminal)
 celery -A ad_budget_project beat --loglevel=info [//]: # (Third terminal)
-python manage.py runserver (Fourth terminal, for Django)
+python manage.py runserver [//]: # (Fourth terminal, for Django)
 ```
 
 Before starting celery workers and beat scheduler, Install Redis (if not already installed) and run it. If you're on Windows, Redis is not installed by default. You can either use Redis via Docker or install a native Windows port.
