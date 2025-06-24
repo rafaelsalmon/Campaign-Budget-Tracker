@@ -5,20 +5,20 @@ from typing import Optional
 
 
 class Brand(models.Model):
-    name: str = models.CharField(max_length=100)
-    daily_budget: float = models.FloatField()
-    monthly_budget: float = models.FloatField()
-    current_daily_spend: float = models.FloatField(default=0.0)
-    current_monthly_spend: float = models.FloatField(default=0.0)
-    is_active: bool = models.BooleanField(default=True)
+    name = models.CharField(max_length=100)
+    daily_budget = models.FloatField()
+    monthly_budget = models.FloatField()
+    current_daily_spend = models.FloatField(default=0.0)
+    current_monthly_spend = models.FloatField(default=0.0)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self) -> str:
         return self.name
 
 
 class Schedule(models.Model):
-    start_hour: int = models.IntegerField()  # 0–23
-    end_hour: int = models.IntegerField()    # 0–23
+    start_hour = models.IntegerField()  # 0–23
+    end_hour = models.IntegerField()    # 0–23
 
     def is_current_hour_in_schedule(self) -> bool:
         now = timezone.now()
@@ -29,12 +29,12 @@ class Schedule(models.Model):
 
 
 class Campaign(models.Model):
-    brand: Brand = models.ForeignKey(Brand, on_delete=models.CASCADE, related_name="campaigns")
-    name: str = models.CharField(max_length=100)
-    is_active: bool = models.BooleanField(default=True)
-    daily_spend: float = models.FloatField(default=0.0)
-    schedule: Schedule = models.ForeignKey(Schedule, on_delete=models.SET_NULL, null=True, blank=True)
-    created_at: models.DateTimeField = models.DateTimeField(auto_now_add=True)
+    brand = models.ForeignKey(Brand, on_delete=models.CASCADE, related_name="campaigns")
+    name = models.CharField(max_length=100)
+    is_active = models.BooleanField(default=True)
+    daily_spend = models.FloatField(default=0.0)
+    schedule = models.ForeignKey(Schedule, on_delete=models.SET_NULL, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
         return f"{self.name} ({'Active' if self.is_active else 'Paused'})"
