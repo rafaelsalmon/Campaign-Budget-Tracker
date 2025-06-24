@@ -2,6 +2,8 @@ from django.contrib import admin
 from .models import Brand, Campaign, Schedule
 
 admin.site.register(Brand)
+admin.site.register(Schedule)
+admin.site.register(Campaign)
 
 #@admin.register(Brand)
 #class BrandAdmin(admin.ModelAdmin):
