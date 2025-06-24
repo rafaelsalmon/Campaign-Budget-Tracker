@@ -106,10 +106,10 @@ Before starting celery workers and beat scheduler, Install Redis (if not already
 
 A) Using Docker -- If you have Docker installed: "docker run -d -p 6379:6379 redis". This will start a Redis container on port 6379.
 
-(B) Native install:
-Download Redis for Windows from: [https://github.com/microsoftarchive/redis/releases](https://github.com/microsoftarchive/redis/releases) (choose the .msi or .zip release). Extract and run: "redis-server.exe".
+(B) Native install -- download Redis for Windows from: [https://github.com/microsoftarchive/redis/releases](https://github.com/microsoftarchive/redis/releases) (choose the .msi or .zip release). Extract and run: "redis-server.exe".
 
-Remember to run it before launching Celery.
+Remember to run it before launching Celery on future executions.
+
 ---
 
 ##  Simulate Spend Command
