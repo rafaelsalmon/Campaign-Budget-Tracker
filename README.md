@@ -43,7 +43,8 @@ This project is a backend system for managing advertising budgets and scheduling
 git clone https://github.com/rafaelsalmon/Campaign-Budget-Tracker.git
 cd ad_budget_project
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate [//]: # (for Linux/macOS systems using Bash or Zsh.)
+.\venv\Scripts\Activate [//]: # (on Windows (PowerShell))
 ```
 
 ### 2. Install dependencies
