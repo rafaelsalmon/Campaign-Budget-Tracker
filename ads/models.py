@@ -32,7 +32,7 @@ class Campaign(models.Model):
     is_active: bool = models.BooleanField(default=True)
     daily_spend: float = models.FloatField(default=0.0)
     schedule: Optional[Schedule] = models.ForeignKey(Schedule, on_delete=models.SET_NULL, null=True, blank=True)
-    created_at: timezone.datetime = models.DateTimeField(auto_now_add=True
+    created_at: timezone.datetime = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
         return f"{self.name} ({'Active' if self.is_active else 'Paused'})"
