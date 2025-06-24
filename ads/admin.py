@@ -10,12 +10,12 @@ class BrandAdmin(admin.ModelAdmin):
 
 @admin.register(Campaign)
 class CampaignAdmin(admin.ModelAdmin):
-    list_display = ("name", "brand", "status", "start_date", "end_date")
+    list_display = ("name", "brand", "is_active", "created_at")
     list_filter = ("status", "brand")
     search_fields = ("name",)
 
 
 @admin.register(Schedule)
 class ScheduleAdmin(admin.ModelAdmin):
-    list_display = ("campaign", "day_of_week", "start_hour", "end_hour")
-    list_filter = ("day_of_week",)
+    list_display = ("start_hour", "end_hour")
+    list_filter = ("start_hour", "end_hour")
