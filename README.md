@@ -99,12 +99,10 @@ celery -A ad_budget_project beat --loglevel=info
 
 Before starting celery workers and beat scheduler, Install Redis (if not already installed). If you're on Windows, Redis is not installed by default. You can either use Redis via Docker or install a native Windows port.
 
-A) Using Docker -- If you have Docker installed:
-docker run -d -p 6379:6379 redis
-This will start a Redis container on port 6379.
+A) Using Docker -- If you have Docker installed: "docker run -d -p 6379:6379 redis". This will start a Redis container on port 6379.
 
 (B) Native install:
-Download Redis for Windows from: [https://github.com/microsoftarchive/redis/releases](https://github.com/microsoftarchive/redis/releases) (choose the .msi or .zip release). Extract and run: "redis-server.exe"
+Download Redis for Windows from: [https://github.com/microsoftarchive/redis/releases](https://github.com/microsoftarchive/redis/releases) (choose the .msi or .zip release). Extract and run: "redis-server.exe".
 
 ---
 
