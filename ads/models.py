@@ -4,11 +4,11 @@ from django.utils import timezone
 
 class Brand(models.Model):
     name = models.CharField(max_length=100)
-#    daily_budget = models.FloatField()
-#    monthly_budget = models.FloatField()
-#    current_daily_spend = models.FloatField(default=0.0)
-#    current_monthly_spend = models.FloatField(default=0.0)
-#    is_active = models.BooleanField(default=True)
+    daily_budget = models.FloatField()
+    monthly_budget = models.FloatField()
+    current_daily_spend = models.FloatField(default=0.0)
+    current_monthly_spend = models.FloatField(default=0.0)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
