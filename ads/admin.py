@@ -11,7 +11,7 @@ class BrandAdmin(admin.ModelAdmin):
 @admin.register(Campaign)
 class CampaignAdmin(admin.ModelAdmin):
     list_display = ("name", "brand", "is_active", "created_at")
-    list_filter = ("status", "brand")
+    list_filter = ("is_active", "brand")
     search_fields = ("name",)
 
 
